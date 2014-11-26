@@ -1,21 +1,21 @@
 
 import TurtleGraphics.Pen;
 
-public class Rect implements Shape {
+public class Rect extends AbstractShape {
 
   
  private double xPos, yPos, width, height;
  
  public Rect(){
-     xPos=0;
-     yPos=0;
+     super();
+     
      width=1;
      height = 1; 
  }
   
  public Rect(double x, double y, double h, double w){
-     xPos=0;
-     yPos=0;
+    super(x,y);
+    
      width=w;
      height =h;
  }
@@ -40,20 +40,7 @@ public class Rect implements Shape {
     p.move(height);
     }
 
-   
-    public double getXPos() {
-       return xPos; }
-
-   
-    public double getYPos() {
-    return yPos;
-    }
-
-    
-    public void move(double xLoc, double yLoc) {
-    xPos = xLoc;
-    yPos = yLoc;
-    }
+  
 
   
     public void stretchBy(double factor) {
