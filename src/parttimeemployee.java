@@ -1,10 +1,11 @@
 public class parttimeemployee extends employee {
     
-    parttimeemployee(){
+   public parttimeemployee(){
         super();
     }
-    public double getPay;
+    public double getPay()
     {
+        
         totalpay += rate*hours;
         return hours * rate;
 }

@@ -4,6 +4,8 @@
   <NonVisualComponents>
     <Component class="javax.swing.ButtonGroup" name="buttonGroup1">
     </Component>
+    <Component class="javax.swing.ButtonGroup" name="buttonGroup2">
+    </Component>
   </NonVisualComponents>
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
@@ -67,11 +69,11 @@
                           <Component id="jScrollPane1" alignment="0" min="-2" pref="197" max="-2" attributes="0"/>
                           <Group type="102" alignment="0" attributes="0">
                               <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="lbltotal" min="-2" pref="136" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="txttotal" min="-2" pref="125" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace min="12" max="32767" attributes="0"/>
+                      <EmptySpace min="34" pref="33" max="32767" attributes="0"/>
                   </Group>
               </Group>
           </Group>
@@ -107,11 +109,11 @@
               <EmptySpace max="-2" attributes="0"/>
               <Component id="jScrollPane1" min="-2" pref="152" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="lbltotal" alignment="3" min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
+                  <Component id="txttotal" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="40" max="32767" attributes="0"/>
+              <EmptySpace pref="36" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -160,7 +162,7 @@
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace max="32767" attributes="0"/>
+                  <EmptySpace pref="40" max="32767" attributes="0"/>
                   <Component id="jRadioButton1" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Component id="jRadioButton2" min="-2" max="-2" attributes="0"/>
@@ -185,9 +187,10 @@
         <Component class="javax.swing.JRadioButton" name="jRadioButton1">
           <Properties>
             <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-              <ComponentRef name="buttonGroup1"/>
+              <ComponentRef name="buttonGroup2"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Full Time"/>
+            <Property name="actionCommand" type="java.lang.String" value="FT"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButton1ActionPerformed"/>
@@ -196,10 +199,14 @@
         <Component class="javax.swing.JRadioButton" name="jRadioButton2">
           <Properties>
             <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-              <ComponentRef name="buttonGroup1"/>
+              <ComponentRef name="buttonGroup2"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Part Time"/>
+            <Property name="actionCommand" type="java.lang.String" value="PT"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButton2ActionPerformed"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>
@@ -265,14 +272,13 @@
         <Property name="text" type="java.lang.String" value="Total Pay"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="lbltotal">
+    <Component class="javax.swing.JTextField" name="txttotal">
       <Properties>
-        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="ff" green="ff" red="99" type="rgb"/>
-        </Property>
-        <Property name="text" type="java.lang.String" value="$0.00"/>
-        <Property name="opaque" type="boolean" value="true"/>
+        <Property name="editable" type="boolean" value="false"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txttotalActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>

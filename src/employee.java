@@ -1,20 +1,18 @@
-
-
-
-
-public class employee {
+public abstract class employee {
 
     
     
 	 String name;
 	 double rate;
-	 int hours;	
-	 
+	 int hours;
+         
+	 protected static double totalpay = 0;
+         
             double low_rate = 6.75;
             double high_rate = 30.50;
             double low_hours = 1;
             double high_hours = 60;
-            double totalpay = 0;
+            
 	public employee() {
 	 name = "";
          rate = 0;
@@ -27,13 +25,13 @@ public class employee {
 	 	return "nonblank";
 	}
 
-	public String getTypeRules() {
-		return "1 or 2";
-	}
+
+	
         
         public static double getTotalPay()
         {
-        return 0;
+            return totalpay;
+            
         }
                 
                 public String getRateRules() {
@@ -67,21 +65,27 @@ public class employee {
 		}
 	}
 
-	public boolean setHours(int hrs) {
-		if (hrs < 1 || hrs > 60)
-			return false;
-		else{
-			hours=hrs;
-			return true;
-		}
-	}
+       
+        
+        
+
+        
 
 	public String getName() {
 		return name;
 	}
 
-	public double getPay() {
-        return 0;
-        }
+	public abstract double getPay();
+        
+    boolean setHours(int hrs) {
+         if(hrs <1 || hrs>60)
+                return false;
+                else
+                hours=hrs;
+                return true;
+    }
+    
 }
+
+
 

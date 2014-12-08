@@ -1,12 +1,18 @@
-
 public class fulltimeemployee extends employee {
-     fulltimeemployee(){
+    public fulltimeemployee(){
         super();
      }
-      public double getPay;
+    
+      public double getPay()
     {
-        totalpay += rate*hours;
-        return rate * hours;
-}
+        double pay;
+        if(hours>0)
+            pay = rate * 2 * (hours-40) + 40 * rate;
+        else
+            pay=rate*hours;
+        totalpay+=pay;
+        return pay;
+        
+    }
 }
 
